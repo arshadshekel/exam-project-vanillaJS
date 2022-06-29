@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHONEX - Only the best phones</title>
+  <link rel="icon" href="images/favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Raleway:wght@400;700&family=Archivo+Black&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/6c95b845a5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="stickyfooter">
+    <header class="container headerRelative">
+
+      <nav class="navbar navbar-light navbar-expand-lg">
+
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target=".dual-nav">
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+
+        <div class="order-lg-1">
+          <a href="cart.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="" width="42px" height="42px"
+              style="transform: translateY(0.4rem);">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+            </svg>
+            <span class="cart-pill"></span>
+          </a>
+        </div>
+
+        <div class="navbar-collapse collapse dual-nav">
+          <ul class="navbar-nav pl-5 pl-lg-0 mt-4 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active first" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">Cart</a>
+            </li>
+
+          </ul>
+          <div class="d-inline-block pl-5 pl-lg-0 mb-4 mb-lg-0">
+            <a href="add-edit.html?item=new"><button
+                class="btn btn-primary  ml-lg-3 mr-auto my-3 my-lg-0 btn-sm addNewProduct d-none">Add
+                item</button> </a>
+          </div>
+        </div>
+
+        <a class="logo navbar-brand" href="index.html">PHONE<span>X</span></a>
+        <div class="navbar-collapse collapse dual-nav justify-content-lg-end mt-0 pb-4 pb-lg-0">
+          <div class="pb-5 pb-lg-0 pl-5 pl-lg-0 btn-group">
+            <div class="dropdown-menu p-4 loginSection dropdown-menu-right" style="position: absolute; top:3rem">
+            </div>
+          </div>
+      </nav>
+    </header>
+
+    <main class="">
+      <div class="hero-bg">
+        <div class="container hero">
+          <div class="hero-items text-center text-sm-left">
+            <h1 class="mb-4">Only the best phones</h1>
+            <p class="hero-text">
+              Dont miss out on the best deals on the best phones on the market.
+            </p>
+            <button class="btn btn-primary mt-5 btn-lg"><a href="products.html">Check out phones</a></button>
+          </div>
+          <div class="hero-pic"></div>
+        </div>
+      </div>
+      <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="z-index: 5000">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-bold" id="confirmModalLabel"></h5>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to remove model brand ?
+            </div>
+            <div class="modal-footer justify-content-end">
+              <button type="button" class="btn btn-primary confirmAction" >Yes</button>
+              <button type="button" class="btn btn-secondary ">
+                No
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="container my-5">
+        <h2 class="text-center my-5 py-4">Featured</h2>
+
+        <div class="featuredList row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 my-5">
+        </div>
+  </div>
+  </section>
+  <section class="container mb-5">
+    <h2 class="text-center my-5 pb-4">Why choose us</h2>
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3">
+      <div class="col">
+        <div class="text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="whychooseuspic">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+          </svg>
+          <div class="card-body text-center">
+            <p>Free shipping for orders over 500kr</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
+            class="whychooseuspic">
+            <g>
+              <rect fill="none" height="24" width="24" />
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M12,5V1L7,6l5,5V7c3.31,0,6,2.69,6,6s-2.69,6-6,6s-6-2.69-6-6H4c0,4.42,3.58,8,8,8s8-3.58,8-8S16.42,5,12,5z" />
+                <g>
+                  <path
+                    d="M9.56,13.49h0.45c0.21,0,0.37-0.05,0.48-0.16s0.16-0.25,0.16-0.43c0-0.08-0.01-0.15-0.04-0.22s-0.06-0.12-0.11-0.17 s-0.11-0.09-0.18-0.11s-0.16-0.04-0.25-0.04c-0.08,0-0.15,0.01-0.22,0.03s-0.13,0.05-0.18,0.1s-0.09,0.09-0.12,0.15 s-0.05,0.13-0.05,0.2H8.65c0-0.18,0.04-0.34,0.11-0.48s0.17-0.27,0.3-0.37s0.27-0.18,0.44-0.23s0.35-0.08,0.54-0.08 c0.21,0,0.41,0.03,0.59,0.08s0.33,0.13,0.46,0.23s0.23,0.23,0.3,0.38s0.11,0.33,0.11,0.53c0,0.09-0.01,0.18-0.04,0.27 s-0.07,0.17-0.13,0.25s-0.12,0.15-0.2,0.22s-0.17,0.12-0.28,0.17c0.24,0.09,0.42,0.21,0.54,0.39s0.18,0.38,0.18,0.61 c0,0.2-0.04,0.38-0.12,0.53s-0.18,0.29-0.32,0.39s-0.29,0.19-0.48,0.24s-0.38,0.08-0.6,0.08c-0.18,0-0.36-0.02-0.53-0.07 s-0.33-0.12-0.46-0.23s-0.25-0.23-0.33-0.38s-0.12-0.34-0.12-0.55h0.85c0,0.08,0.02,0.15,0.05,0.22s0.07,0.12,0.13,0.17 s0.12,0.09,0.2,0.11s0.16,0.04,0.25,0.04c0.1,0,0.19-0.01,0.27-0.04s0.15-0.07,0.2-0.12s0.1-0.11,0.13-0.18s0.04-0.15,0.04-0.24 c0-0.11-0.02-0.21-0.05-0.29s-0.08-0.15-0.14-0.2s-0.13-0.09-0.22-0.11s-0.18-0.04-0.29-0.04H9.56V13.49z" />
+                  <path
+                    d="M15.3,14.24c0,0.32-0.03,0.6-0.1,0.82s-0.17,0.42-0.29,0.57s-0.28,0.26-0.45,0.33s-0.37,0.1-0.59,0.1 s-0.41-0.03-0.59-0.1s-0.33-0.18-0.46-0.33s-0.23-0.34-0.3-0.57s-0.11-0.5-0.11-0.82V13.5c0-0.32,0.03-0.6,0.1-0.82 s0.17-0.42,0.29-0.57s0.28-0.26,0.45-0.33s0.37-0.1,0.59-0.1s0.41,0.03,0.59,0.1s0.33,0.18,0.46,0.33s0.23,0.34,0.3,0.57 s0.11,0.5,0.11,0.82V14.24z M14.45,13.38c0-0.19-0.01-0.35-0.04-0.48c-0.03-0.13-0.07-0.23-0.12-0.31s-0.11-0.14-0.19-0.17 s-0.16-0.05-0.25-0.05s-0.18,0.02-0.25,0.05s-0.14,0.09-0.19,0.17s-0.09,0.18-0.12,0.31s-0.04,0.29-0.04,0.48v0.97 c0,0.19,0.01,0.35,0.04,0.48s0.07,0.24,0.12,0.32s0.11,0.14,0.19,0.17s0.16,0.05,0.25,0.05s0.18-0.02,0.25-0.05 s0.14-0.09,0.19-0.17s0.09-0.19,0.11-0.32c0.03-0.13,0.04-0.29,0.04-0.48V13.38z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+          <div class="card-body">
+            <p class="whychooseustext">30 day money-back guarantee</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="whychooseuspic">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+            <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+          </svg>
+          <div class="card-body text-center">
+            <p class="whychooseustext">Delivery within 1-3 working days</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="signupsection">
+    <div class="signup container text-center">
+      <h3 class="signuptitle">DONT MISS OUT ON OUR LATEST OFFERS</h3>
+      <p>
+        Sign up using your email to receive our latest offers. We promise
+        you wont regret it
+      </p>
+      <div class="mt-5">
+        <input type="text" name="emailsignup" class="emailsignup" />
+        <button class="btn btn-primary ml-3">Sign up</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2 class="text-center my-5 py-4">Customer feedback</h2>
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 pb-5">
+      <div class="col mb-5">
+        <div class="card">
+          <div class="card-body card-bg">
+            <p class="testimonials">
+              “I did an error when ordering but the customer support was
+              brilliant and helped me resolve the issue. I will be
+              purchasing from PHONEX again”
+            </p>
+          </div>
+          <div class="card-footer">- Anders</div>
+        </div>
+      </div>
+      <div class="col mb-5">
+        <div class="card">
+          <div class="card-body card-bg">
+            <p class="testimonials">
+              “PHONEX shipped the phone the same day I ordered it. I
+              received it only days after. I am very satisfied with the
+              service given and will be buying from them again in the
+              future”
+            </p>
+          </div>
+          <div class="card-footer">- Miriam</div>
+        </div>
+      </div>
+      <div class="col mb-5">
+        <div class="card">
+          <div class="card-body card-bg">
+            <p class="testimonials">
+              “I was unsure what phone to buy so I contacted the customer
+              support. The support was great and was quickly able to find
+              what phone was best for my use. They did not sell me an overly
+              expensive phone, that is the reason I will be using PHONEX
+              next time I need a phone.”
+            </p>
+          </div>
+          <div class="card-footer">- Muhammad</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div aria-live="polite" aria-atomic="true"
+    class="fixed-bottom d-none mb-4 d-flex justify-content-center align-items-center">
+    <div>
+      <div class="toast py-2 px-2 d-none bg-success" role="alert" aria-live="assertive" aria-atomic="true"
+        data-delay="2000">
+        <div class="toast-body text-white bg-success border-0">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+  </div>
+  <footer>
+    <div class="container pb-5">
+      <div class="row px-3 text-center text-sm-left">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pt-5">
+          <div class="footer-title text-uppercase font-weight-bold">
+            Company
+          </div>
+          <p>About us</p>
+          <p>Blog</p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pt-5">
+          <div class="footer-title text-uppercase font-weight-bold">
+            Contact us
+          </div>
+          <p>+47 41560088</p>
+          <p>Mon - Fri: 0800 - 2000 CET</p>
+          <p>Sat - Sun: 0800 - 1600 CET</p>
+          <p>contact@phonex.com</p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 pt-5">
+          <div class="footer-title text-uppercase font-weight-bold">
+            CUSTOMER ASSITANCE
+          </div>
+          <p>Order status</p>
+          <p>Return policy</p>
+          <p>FAQ</p>
+          <p>Shipping and delivery</p>
+          <p>Returns</p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 col-lg-3 pt-5">
+          <div class="footer-title text-uppercase font-weight-bold">
+            Connect with us:
+          </div>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i><i class="fa fa-instagram" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/index.js" type="module"></script>
+  <script>
+    
+  </script>
+</body>
+
+</html>

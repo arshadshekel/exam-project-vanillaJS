@@ -1,0 +1,146 @@
+.product-thumbnail {
+    max-width: 150px;
+    max-height: 150px;
+
+    &-index {
+        max-width: 100px;
+    }
+}
+
+.product-card {
+    background: rgba(0, 74, 173, 0.1);
+    max-width: 300px;
+    margin: 0 auto;
+    color: black;
+
+    &:hover {
+        box-shadow: 7px 7px 8px -5px rgba(0, 0, 0, 0.2);
+    }
+
+    a {
+        color: black;
+
+        &:hover {
+            color: rgb(128, 128, 128);
+        }
+    }
+
+    &-index {
+        background: rgba(0, 74, 173, 0.1);
+        margin: 0 auto;
+        color: black;
+
+        &:hover {
+            box-shadow: 7px 7px 8px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            color: black;
+
+            &:hover {
+                color: rgb(128, 128, 128);
+            }
+        }
+    }
+}
+
+.product-brand {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.product-model {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.product-detail-brand {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 1.5em;
+}
+
+.product-detail-model {
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.product-price {
+    font-weight: 700;
+}
+
+.productSearch {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+
+.brandList {
+    list-style-type: none;
+    padding: 0;
+
+    li:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+.priceOrder {
+    list-style-type: none;
+    padding: 0;
+
+    li:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+.mainpicture {
+    max-width: 300px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.breadcrumb {
+    background: transparent;
+}
+
+.breadcrumb-item {
+    font-weight: 400;
+}
+
+.addToCartProd {
+    margin: 0 auto;
+}
+
+.current {
+    font-weight: 700;
+}
+
+.card:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+
+@media (min-width: 575.98px) {
+    .product-thumbnail-index {
+        max-width: 150px;
+    }
+}
+
+
+@media (min-width: 767.98px) {
+    .product-thumbnail-index {
+        max-width: 200px;
+    }
+}
+
+
+@media (min-width: 991.98px) {
+    .product-thumbnail-index {
+        max-width: 300px;
+    }
+}

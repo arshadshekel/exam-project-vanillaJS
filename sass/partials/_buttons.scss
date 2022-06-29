@@ -1,0 +1,89 @@
+.btn-primary {
+    background: rgb(0, 74, 173);
+
+    color: white;
+
+    &:hover {
+        background: rgba(0, 74, 173, 0.5);
+        border: none;
+        color: white;
+    }
+
+    &:focus {
+        outline: none;
+        border: none;
+    }
+
+    border:none;
+
+}
+
+
+.btn-secondary {
+
+    color: white;
+
+    &:hover {
+
+        border: none;
+        color: white;
+    }
+
+    border:none;
+}
+
+
+.btn-danger {
+    &:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    border:none;
+
+
+    &:hover {
+        background: rgba(200, 35, 51, 0.5);
+        border: none !important;
+    }
+}
+
+
+
+.btn-success:hover {
+    border: rgba(33, 136, 56, 0.5) 1px solid;
+    background: rgba(33, 136, 56, 0.5);
+}
+
+
+.bg-primary {
+    background: rgb(0, 74, 173) !important;
+}
+
+a:hover {
+    text-decoration: none;
+    color: unset;
+}
+
+
+
+button a {
+    color: white;
+}
+
+.btn-logout {
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+.btn-danger:hover {
+    background: rgba(200, 35, 51, 0.5);
+    border: 1px solid rgba(200, 35, 51, 0.5);
+}
+
+.btn-success:hover {
+    border: rgba(33, 136, 56, 0.5) 1px solid;
+    background: rgba(33, 136, 56, 0.5);
+}

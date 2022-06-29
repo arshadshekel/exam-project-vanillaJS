@@ -1,0 +1,184 @@
+.cart {
+  transform: translateY(0.75rem);
+  right: 15px;
+  position: absolute;
+  display: block;
+  z-index: 100;
+  text-decoration: none;
+  color: black;
+  font-family: "Archivo Black", sans-serif;
+ }
+
+ .cart-pill{
+  right: 0.2rem;
+  position: absolute;
+  display: none;
+  font-size: 0.7em;
+  z-index: 100;
+  padding: 2px 6px;
+  border-radius: 50%;
+  background-color: #004aad;
+  color: white;
+  font-weight: 400;
+ }
+
+.navbar {
+  background: transparent !important;
+}
+
+.navbar-collapse {
+  background-color: rgba(0, 74, 173, 0.1);
+  margin-top: 25px;
+  background-clip: content-box;
+}
+
+.active {
+  font-weight: 700;
+}
+
+
+nav {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  position: relative;
+  .signin{
+    margin-left: 0.5rem;
+  }
+
+ 
+  a {
+    color: black;
+  }
+}
+
+.logo {
+  font-size: 2rem;
+
+  transform: translate(-50%, 0rem);
+  left: 50%;
+  top: 0;
+  position: absolute;
+  z-index: 100;
+  text-decoration: none;
+  color: black;
+  font-family: "Archivo Black", sans-serif;
+
+  span {
+    color: #004aad;
+    font-weight: bold;
+  }
+}
+
+.first {
+  padding-left: 0 !important;
+}
+
+
+svg {
+  opacity: 0.7;
+}
+
+/* https://jsfiddle.net/Beaniie/s8rm1f0q/5/ */
+
+.navbar-toggler {
+  border: none;
+  &:focus {
+    outline: none;
+    background: transparent !important;
+  }
+  height: 30px;
+  background: transparent !important;
+  padding: 0;
+  transform: translateY(-0.15rem);
+}
+
+.navbar-toggler .icon-bar {
+  background-color: #000;
+  transform: rotate(0deg) translate(0px, 0px);
+  transition: ease all 0.2s;
+}
+
+.navbar-toggler .icon-bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  border-radius: 1px;
+  margin: 8px 0;
+}
+
+.icon-bar:nth-child(2) {
+  width: 18px;
+  transition: ease all 0.2s;
+}
+
+.navbar-toggler:hover > .icon-bar:nth-child(2) {
+  width: 25px;
+  transition: ease all 0.2s;
+}
+
+.navbar-toggler:active > .icon-bar:nth-child(2) {
+  width: 25px;
+  transition: ease all 0.2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 8px);
+  transition: ease all 0.2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(2) {
+  opacity: 0;
+  transition: ease all 0.2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -8px);
+  transition: ease all 0.2s;
+}
+
+
+
+@media (min-width: 768px) {
+  .hero {
+    grid-auto-rows: minmax(75px, auto);
+    grid-template-areas:
+      ". . . ."
+      ". . . heropic"
+      "heroitems heroitems . heropic"
+      ". . . heropic"
+      ". . . .";
+  }
+  
+
+}
+
+@media (min-width: 992px) {
+  .hero {
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      ". . . ."
+      ". . . heropic"
+      "heroitems heroitems . heropic"
+      ". . . heropic"
+      ". . . .";
+  }
+
+  
+    .navbar-collapse {
+      background-color: rgb(251, 251, 253);
+      margin-top: 0px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    grid-auto-rows: minmax(125px, auto);
+    grid-template-areas:
+      ". . . ."
+      ". . . heropic"
+      "heroitems heroitems . heropic"
+      ". . . heropic"
+      ". . . .";
+  }
+}
